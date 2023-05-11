@@ -8,7 +8,10 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ApiView: typeof import('./src/components/api/views/ApiView.vue')['default']
+    ContentView: typeof import('./src/components/home/views/ContentView.vue')['default']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
     ExamplesView: typeof import('./src/components/examples/views/ExamplesView.vue')['default']
+    HeaderView: typeof import('./src/components/home/views/HeaderView.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Home: typeof import('./src/components/home/views/Home.vue')['default']
     HomeView: typeof import('./src/components/home/views/HomeView.vue')['default']

@@ -1,17 +1,19 @@
 <template>
-  <button @click="toggleDark()">
-    <span class="ml-2">{{ isDark ? "Dark" : "Light" }}</span>
-    --
-    <span>{{ t("homeView.examples") }}}</span>
-  </button>
+  <HeaderView />
+  <div class="content-box">
+    <div class="content">
+      <router-view v-slot="{ Component }">
+        <transition name="move" mode="out-in">
+          <keep-alive>
+            <component :is="Component"></component>
+          </keep-alive>
+        </transition>
+      </router-view>
+    </div>
+  </div>
+ 
 </template>
 <script setup lang="ts">
-import { useDark, useToggle } from "@vueuse/core"
-import { useI18n } from "vue-i18n"
-
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
-
-const { t } = useI18n()
+import HeaderView from './HeaderView.vue';
 </script>
 <style scoped></style>
