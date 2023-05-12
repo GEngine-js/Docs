@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "preview": "vitepress preview src"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
@@ -31,6 +31,7 @@
     "unplugin-vue-components": "^0.22.4",
     "vite": "^4.3.2",
     "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vitepress": "^1.0.0-alpha.75",
     "vue-tsc": "^1.4.2"
   },
   "config": {
@@ -38,15 +39,15 @@
       "path": "./node_modules/cz-conventional-changelog-zh",
       "types": {
         "merge": {
-          "description": "合并分支",
+          "description": "merge branch",
           "title": "Merge"
         },
         "release": {
-          "description": "发布版本",
+          "description": "release version",
           "title": "Release"
         },
         "WIP": {
-          "description": "进行中的功能，属于未完成的情况",
+          "description": "A function in progress is incomplete",
           "title": "WIP"
         }
       }

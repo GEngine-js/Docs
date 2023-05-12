@@ -29,3 +29,7 @@ dist-ssr
 *.rar
 *.zip
 *.7z
+
+# vitepress
+src/.vitepress/dist
+src/.vitepress/cache
