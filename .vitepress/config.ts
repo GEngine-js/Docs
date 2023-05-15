@@ -6,9 +6,9 @@ const { BUILD } = process.env
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "./src",
-  outDir: BUILD == 'build' ? "./dist" : "./release",
+  outDir: BUILD == 'release' ? "./release" : "./dist",
   title: "GEngine-Js",
-  base: "/GEngine/",
+  base: "/Docs/",
   description: "Rendering engine based on webgpu",
   head: [["link", { rel: "icon", href: "/assets/GEngineIcon.png" }]],
   themeConfig: {
