@@ -31,5 +31,5 @@ dist-ssr
 *.7z
 
 # vitepress
-src/.vitepress/dist
-src/.vitepress/cache
+.vitepress/dist
+.vitepress/cache
