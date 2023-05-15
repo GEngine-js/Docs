@@ -1,12 +1,9 @@
 import { defineConfig } from "vitepress"
-import path from "path"
-const ENV_PATH = path.resolve(__dirname, "environments")
 
-const { BUILD } = process.env
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "./src",
-  outDir: BUILD == 'release' ? "./release" : "./dist",
+  outDir: "./dist",
   title: "GEngine-Js",
   base: "/Docs/",
   description: "Rendering engine based on webgpu",
