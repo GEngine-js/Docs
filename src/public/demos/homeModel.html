@@ -97,15 +97,20 @@
 				window.addEventListener("resize", onWindowResize);
 				scene.add(skybox);
 				scene.setCamera(camera);
-				const axes = new Axes();
-				var timeStampZero = performance.now();
-				var timeParameter = 0;
+				var radiu = 2.3;
+				var i = 0;
 				function animate(timestamp) {
-					timeParameter = (timestamp - timeStampZero) * 0.001;
+					i = i + 0.1;
+					var rad = (i * Math.PI) / 180;
+					var x = Math.sin(rad) * radiu;
+					var z = Math.cos(rad) * radiu;
+					camera.position.set(x, 0, z)
+
 					requestAnimationFrame(animate);
 					control.update();
 					scene.render();
 				}
+
 				function onWindowResize() {
 					camera.aspect = window.innerWidth / window.innerHeight;
 					scene.resize(window.innerWidth, window.innerHeight);

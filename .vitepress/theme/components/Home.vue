@@ -11,11 +11,5 @@
 
 <script setup lang="ts">
 // import DefaultTheme from "vitepress/theme"
-import { onMounted } from "vue"
-
 // const { Layout } = DefaultTheme
-onMounted(() => {
-  const imgbg: any = document.getElementsByClassName("image-bg")[0]
-  imgbg.style.display = "none"
-})
 </script>
