@@ -1,11 +1,15 @@
 import { defineConfig } from "vitepress"
+import VueSetupExtend from "vite-plugin-vue-setup-extend"
+import AutoImport from "unplugin-auto-import/vite"
+import Components from "unplugin-vue-components/vite"
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "./src",
   outDir: "./dist",
   title: "GEngine-Js",
-  titleTemplate: 'The Lightwight Render Library',
+  titleTemplate: "The Lightwight Render Library",
   base: "/Docs/",
   description: "Rendering engine based on webGPU",
   head: [["link", { rel: "icon", href: "/Docs/assets/GEngineIcon.png" }]],
@@ -35,5 +39,14 @@ export default defineConfig({
     server: {
       open: true,
     },
+    plugins: [
+      VueSetupExtend(),
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+      }),
+    ],
   },
 })

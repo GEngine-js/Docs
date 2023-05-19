@@ -2,6 +2,16 @@
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
+<iframe  
+ height=700px 
+ width=100% 
+ src="https://gengine-js.github.io/GEngine/example/shadow/directionalLightShadow.html"  
+ frameborder=0  
+ allowfullscreen>
+ </iframe>
+
+<<< ./src/components/examples/views/ExamplesView.vue
+
 ## Syntax Highlighting
 
 VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:

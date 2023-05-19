@@ -12,7 +12,7 @@ hero:
       link: https://gengine-js.github.io/GEngine/example/index.html
     - theme: alt
       text: Get Started
-      link: /api-examples
+      link: /components/guide/markdown-examples
 
 features:
   - title: Approachable
@@ -22,4 +22,3 @@ features:
   - title: Lightwight
     details: Small package size
 ---
-
